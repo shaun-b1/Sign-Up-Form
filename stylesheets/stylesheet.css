@@ -1,23 +1,57 @@
+@font-face {
+    font-family: Norse-Bold;
+    src: url(../assets/Norse-Bold.otf);
+}
+
 body {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .banner-box {
     width: 40vw;
     height: 100vh;
     background: url("../assets/banner_image.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
     background-size: 40vw 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.logo-box {
+    height: 25vh;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    position: relative;
+    top: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-box img {
+    height: clamp(100px, 80%, 200px);
+}
+
+.logo-box h1 {
+    font-family: Norse-Bold;
+    font-size: 7rem;
+    color: white;
+}
+
+.photo-credit {
+    align-self: flex-end;
+    margin: 1vh;
+}
+
+.photo-credit p,
+.photo-credit a {
+    color: white;
 }
 
 .form-box {
-    background-color: grey;
+    background-color: lightgray;
     width: 66vw;
     height: 100vh;
-}
-
-.logo {
-    height: 10vh;
+    ;
 }
