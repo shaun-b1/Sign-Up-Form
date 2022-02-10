@@ -1,0 +1,23 @@
+body {
+    display: flex;
+    justify-content: space-between;
+}
+
+.banner-box {
+    width: 40vw;
+    height: 100vh;
+    background: url("../assets/banner_image.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 40vw 100vh;
+}
+
+.form-box {
+    background-color: grey;
+    width: 66vw;
+    height: 100vh;
+}
+
+.logo {
+    height: 10vh;
+}
