@@ -6,6 +6,11 @@
 body {
     display: flex;
     justify-content: center;
+    font-family: sans-serif;
+}
+
+i {
+    font-style: italic;
 }
 
 .banner-box {
@@ -19,11 +24,11 @@ body {
 }
 
 .logo-box {
-    height: 25vh;
+    height: 20vh;
     width: 100%;
     background: rgba(0, 0, 0, 0.4);
     position: relative;
-    top: 25vh;
+    top: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,7 +40,7 @@ body {
 
 .logo-box h1 {
     font-family: Norse-Bold;
-    font-size: 7rem;
+    font-size: 6rem;
     color: white;
 }
 
@@ -44,14 +49,97 @@ body {
     margin: 1vh;
 }
 
-.photo-credit p,
-.photo-credit a {
+.photo-credit * {
     color: white;
+    font-size: 1.5vh;
 }
 
 .form-box {
-    background-color: lightgray;
+    background-color: rgb(240, 240, 240);
     width: 66vw;
     height: 100vh;
-    ;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.form-box>div {
+    padding-left: 5vh;
+    padding-bottom: 2vh;
+    padding-top: 4vh;
+    font-size: 1.3rem;
+}
+
+.form-box p {
+    margin-right: 23vh;
+    padding-bottom: 3.5vh;
+}
+
+.form-box>div:first-child {
+    margin-top: 10vh;
+}
+
+.form-box>div:nth-child(2) {
+    background-color: white;
+    height: 30vh;
+    box-shadow: 0 2px 5px grey;
+}
+
+#create-account {
+    display: flex;
+    flex-direction: column;
+}
+
+#create-account div {
+    display: flex;
+    padding-bottom: 2vh;
+}
+
+label,
+input {
+    display: block;
+}
+
+label {
+    text-transform: uppercase;
+    font-size: 0.7rem;
+}
+
+input {
+    padding-left: 5px;
+    margin-right: 5vh;
+    margin-bottom: 1vh;
+    width: clamp(140px, 30vh, 240px);
+    height: 1.5rem;
+    border: 1px solid #E5E7EB;
+    border-radius: 5px;
+}
+
+input:focus {
+    outline: 0;
+    box-shadow: 3px 3px 10px grey;
+    border: 1px solid blue;
+}
+
+input:valid {
+    border: 1px solid lightgreen;
+}
+
+input:invalid:not(:focus):not(:placeholder-shown) {
+    border: 1px solid lightcoral;
+}
+
+input:invalid:focus:not(:placeholder-shown)~.requirements {
+    max-height: 10px;
+    display: block;
+    position: absolute;
+    width: clamp(140px, 30vh, 240px);
+    margin-top: 2.5px;
+}
+
+.requirements {
+    overflow: visible;
+    color: red;
+    display: none;
+    font-size: 1vh;
 }
