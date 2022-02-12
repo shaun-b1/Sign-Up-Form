@@ -3,6 +3,11 @@
     src: url(../assets/Norse-Bold.otf);
 }
 
+:root {
+    --main-green: #596D48;
+    --main-grey: #E5E7EB
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -40,8 +45,9 @@ i {
 
 .logo-box h1 {
     font-family: Norse-Bold;
-    font-size: 6rem;
+    font-size: 6.5rem;
     color: white;
+    padding-top: 2vh;
 }
 
 .photo-credit {
@@ -64,25 +70,30 @@ i {
 }
 
 .form-box>div {
-    padding-left: 5vh;
-    padding-bottom: 2vh;
-    padding-top: 4vh;
+    padding: 6vh;
     font-size: 1.3rem;
 }
 
 .form-box p {
-    margin-right: 23vh;
+    margin-right: 25vh;
     padding-bottom: 3.5vh;
 }
 
 .form-box>div:first-child {
-    margin-top: 10vh;
+    padding-top: 12vh;
+    padding-bottom: 3vh;
 }
 
 .form-box>div:nth-child(2) {
     background-color: white;
-    height: 30vh;
+    height: 27vh;
     box-shadow: 0 2px 5px grey;
+    padding: 3vh 6vh 4vh;
+}
+
+.form-box>div:nth-child(2)>p {
+    padding-top: 1;
+    padding-bottom: 2vh;
 }
 
 #create-account {
@@ -109,9 +120,10 @@ input {
     padding-left: 5px;
     margin-right: 5vh;
     margin-bottom: 1vh;
+    margin-top: 3px;
     width: clamp(140px, 30vh, 240px);
     height: 1.5rem;
-    border: 1px solid #E5E7EB;
+    border: 1px solid var(--main-grey);
     border-radius: 5px;
 }
 
@@ -122,11 +134,11 @@ input:focus {
 }
 
 input:valid {
-    border: 1px solid lightgreen;
+    border: 1px solid rgb(87, 243, 87);
 }
 
 input:invalid:not(:focus):not(:placeholder-shown) {
-    border: 1px solid lightcoral;
+    border: 1px solid rgb(243, 87, 87);
 }
 
 input:invalid:focus:not(:placeholder-shown)~.requirements {
@@ -142,4 +154,28 @@ input:invalid:focus:not(:placeholder-shown)~.requirements {
     color: red;
     display: none;
     font-size: 1vh;
+}
+
+button {
+    background-color: var(--main-green);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    width: 200px;
+    height: 40px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    box-shadow: 2px 2px 5px grey;
+}
+
+.form-box>div:last-child>p {
+    font-size: 1.7vh;
+}
+
+.form-box>div:last-child>p>a:link,
+.form-box>div:last-child>p>a:visited,
+.form-box>div:last-child>p>a:hover,
+.form-box>div:last-child>p>a:active {
+    color: var(--main-green);
+    text-decoration: none;
 }
